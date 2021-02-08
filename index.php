@@ -30,9 +30,42 @@
         </header>
 
         <!-- Container -->
-        <div class="container"></div>
+        <div class="center">
+            <div class="container">
+                <div class="item">
+                    <section class="graph-circle">
+                        <div class="circle-graph-container">
+                            <div class="circle-graph easyPieChart" data-percent="60" >
+                            <p>60%</p>
+                            <!-- <canvas width="269" height="269" style="width: 150px; height: 150px;"></canvas> -->
+                            
+                            </div>
+                        </div>
+                        <p class="totalTit">Total Process Rates</p>
+                    </section>
+                </div>
+                <div class="item"></div>
+                <div class="item"></div>
+                <div class="item"></div>
+                <div class="item"></div>
+                <div class="item"></div>
+                <!-- <div class="item">G</div> -->
+                <!-- <div class="item">H</div>
+                <div class="item">I</div>
+                <div class="item">J</div> -->
+
+            </div>            
+        </div>
         
     </div>
+    
+    <!-- script files load -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/easy-pie-chart/2.1.6/jquery.easypiechart.min.js"></script>
+
+    <!-- pie chart jQuery link -->
+    <script src="/myschedule/js/piechart.js"></script>
+
     
 </body>
 </html>
