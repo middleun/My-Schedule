@@ -6,9 +6,5 @@
 
 #DDE4F7
 
-<<<<<<< HEAD
 #F3F6FB
-테스트
-=======
-#F3F6FB
->>>>>>> 6e6de96b8206d7df20eb4416a82fffd8561adbba
+
