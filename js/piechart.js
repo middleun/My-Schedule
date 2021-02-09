@@ -1,4 +1,5 @@
 $(function() {
+<<<<<<< HEAD
 
     let pieSize=250;
     let liWidth=$(window).width();
@@ -14,11 +15,14 @@ $(function() {
     // console.log(pieSize);
     
     $('.circle-graph').removeData('easyPieChart').find('canvas').remove();
+=======
+>>>>>>> 6e6de96b8206d7df20eb4416a82fffd8561adbba
     $('.circle-graph').easyPieChart({
       scaleColor: false,
       lineWidth: 45,
       lineCap: 'butt',
       barColor: '#5F75DF',
+<<<<<<< HEAD
       trackColor: '#DDE4F7' ,
       size: pieSize,
       animate: 1200
@@ -53,3 +57,10 @@ $(function() {
 
     });
   });
+=======
+      trackColor: '#F3F6FB' ,
+      size: 250,
+      animate: 800
+    });
+  });
+>>>>>>> 6e6de96b8206d7df20eb4416a82fffd8561adbba

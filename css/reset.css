@@ -2,7 +2,11 @@
 
 /* reset CSS style */
 *{margin:0; padding:0; box-sizing: border-box;}
+<<<<<<< HEAD
 body{font-size:14px; font-family: 'Montserrat', sans-serif;}
+=======
+body{font-size:14px; font-family: 'Open Sans', sans-serif;}
+>>>>>>> 6e6de96b8206d7df20eb4416a82fffd8561adbba
 .clear:after{clear:both; display: block; content: '';}
 .center{width:100%; height:auto; max-width: 980px; margin: auto;}
 ol,ul{list-style: none;}
