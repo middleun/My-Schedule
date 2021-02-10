@@ -5,7 +5,9 @@
 
 @media screen and (max-width:780px){
     /* Container Style */
-    .container{grid-template-columns: repeat(1, 1fr); grid-template-rows: repeat(9,minmax(100px, auto));}
+    .wrap{justify-content: start;}
+    .container{grid-template-columns: repeat(1, 1fr); grid-template-rows: repeat(9,minmax(100px, auto));
+    padding: 20px 0 ;}
 
     .container .item:nth-child(1),
     .container .item:nth-child(2),
@@ -16,15 +18,21 @@
     /* button Box Style */
     .btns{justify-content: center;}
     .btns button{border:5px 20px; font-size:12px;}
+
+    /* footer style */
+    footer{position:relative;}
     
 
 }
 
 @media screen and (max-width:400px){
-    .container{grid-template-rows: repeat(9,minmax(70px, auto)); padding:20px 0 100px; }
+    .container{grid-template-rows: repeat(9,minmax(70px, auto)); }
     .graph-circle p{font-size:18px; font-weight:400;}
 
     .container .subPfBar .pfImg{font-size:20px;}
+
+    footer{padding:10px 15px;}
+    footer p{font-size: 12px;}
 
     
 }

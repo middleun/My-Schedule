@@ -53,16 +53,16 @@
 
         <!-- Container -->
         <div class="center">
-            <form action="" method="get" name="updateRate">
+            <form action="/myschedule/php/update_rate.php" method="get" name="updateRate">
                 <div class="container">
                     <div class="item">
                         <section class="graph-circle">
                             <div class="circle-graph-container">
-                                <div class="circle-graph easyPieChart" data-percent="60" >
-                                <p>60%</p>
-                                <!-- <canvas width="269" height="269" style="width: 150px; height: 150px;"></canvas> -->
+                                <!-- <div class="circle-graph easyPieChart" data-percent="60" >
+                                    <p>60%</p>
+                                    <canvas width="269" height="269" style="width: 150px; height: 150px;"></canvas> -->
                                 
-                                </div>
+                                <!-- </div> -->
                             </div>
                             <p class="totalTit">Total Process Rates</p>
                         </section>
@@ -76,7 +76,7 @@
                         </div>
                         <div class="pfContents">
                             <h3>Database Project</h3>
-                            <p>Progress Rate : <input type="text" value="<?=$sch_db?>" class="rateNum">% || Last Update : <b>2021-02-09</b></p>
+                            <p>Progress Rate : <input type="text" value="<?=$sch_db?>" class="rateNum" name="sch_db_rate">% || Last Update : <b>2021-02-09</b></p>
                             <div class="pfBarBox">
                                 <span class="pfBar"></span>
                             </div>
@@ -89,7 +89,7 @@
                         </div>
                         <div class="pfContents">
                             <h3>API Project</h3>
-                            <p>Progress Rate : <input type="text" value="<?=$sch_api?>" class="rateNum">% || Last Update : <b>2021-02-09</b></p>
+                            <p>Progress Rate : <input type="text" value="<?=$sch_api?>" class="rateNum"name="sch_api_rate">% || Last Update : <b>2021-02-09</b></p>
                             <div class="pfBarBox">
                                 <span class="pfBar"></span>
                             </div>
@@ -101,7 +101,7 @@
                         </div>
                         <div class="pfContents">
                             <h3>Renewal Project</h3>
-                            <p>Progress Rate : <input type="text" value="<?=$sch_ren?>" class="rateNum">% || Last Update : <b>2021-02-09</b></p>
+                            <p>Progress Rate : <input type="text" value="<?=$sch_ren?>" class="rateNum" name="sch_ren_rate">% || Last Update : <b>2021-02-09</b></p>
                             <div class="pfBarBox">
                                 <span class="pfBar"></span>
                             </div>
@@ -113,25 +113,35 @@
                         </div>
                         <div class="pfContents">
                             <h3>Web Planning Project</h3>
-                            <p>Progress Rate : <input type="text" value="<?=$sch_pla?>" class="rateNum">% || Last Update : <b>2021-02-09</b></p>
+                            <p>Progress Rate : <input type="text" value="<?=$sch_pla?>" class="rateNum" name="sch_pla_rate">% || Last Update : <b>2021-02-09</b></p>
                             <div class="pfBarBox">
                                 <span class="pfBar"></span>
                             </div>
                         </div>
                     </div>
                
-                 </form>      
-                 <div class="item btns">
-                     <button type="button">진행상황 확인</button>
-                     <button type="button">진행상황 수정</button>
-                     <button type="button">진행상황 삭제</button>
-                 </div>
+                    </form>       
+                    <div class="item btns">
+                        <button type="button">진행상황 확인</button>
+                        <button type="submit">진행상황 수정</button>
+                        <button type="button">진행상황 삭제</button>
+                    </div>
                 </div>
-                    
+                <!-- end of container -->
 
-        </div>  
+
+            </form>    
+            <!--end of form table  -->
+
+        </div>
+        <!--end of center  -->
+        <footer>
+            <p>Designed by MyDesign : mydeign@no-site.com</p>
+        </footer>
      
-    
+    </div>
+    <!-- end of wrap -->
+
     <!-- script files load -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/easy-pie-chart/2.1.6/jquery.easypiechart.min.js"></script>
@@ -139,11 +149,11 @@
     <!-- pie chart jQuery link -->
     <script src="/myschedule/js/piechart.js"></script>
 
-<<<<<<< HEAD
     <!-- main jQuery link -->
     <script src="/myschedule/js/custom.js"></script>
-=======
->>>>>>> 6e6de96b8206d7df20eb4416a82fffd8561adbba
-    
+
+    <script src="/myschedule/js/total_avg.js"></script>
+
+
 </body>
 </html>

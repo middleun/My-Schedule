@@ -16,7 +16,7 @@ header .headerWrap .mIcon span:nth-child(3){width:70%;}
 
 /* Container Style */
 
-.container{width:100%; height: auto; padding: 20px 0; display:grid;    grid-template-columns: repeat(2, 1fr); grid-template-rows: repeat(5,minmax(100px, auto)); gap:5px;}
+.container{width:100%; height: auto; display:grid; grid-template-columns: repeat(2, 1fr); grid-template-rows: repeat(5,minmax(100px, auto)); gap:5px;}
 .container .item{border:1px solid #ccc; background: #fff; }
 .container .item:nth-child(1){grid-row:1/5; display:flex; justify-content: center;align-items: center; padding:30px 0;}
 .container .item:nth-child(6){grid-column:1/3;}
@@ -39,6 +39,7 @@ canvas {position: absolute;}
 .container .subPfBar .pfContents{width:85%;}
 .container .subPfBar .pfContents h3{font-size:14px; font-weight: 600;}
 .container .subPfBar .pfContents p{font-size:12px; font-weight: 300; margin:0 0 5px;}
+.container .subPfBar .pfContents p b{font-weight: normal;}
 .container .subPfBar .pfContents .rateNum{font-size:12px; font-weight: 300; width:25px; text-align:right; border:0;}
 .container .subPfBar .pfContents .rateNum:focus{border:1px solid #5F75DF;}
 .container .subPfBar .pfBarBox{padding:5px 0; border:1px solid #ccc; border-radius: 10px; background:#DDE4F7;}
@@ -49,6 +50,10 @@ canvas {position: absolute;}
 .btns{display:flex; align-items:center; justify-content: flex-end; 
     padding:10px;}
 .btns button{border:1px solid #5F75DF; background: #5F75DF;
-color:#fff; font-weight: 400; font-family: 'Noto Sans KR'; padding:10px 30px;}
+color:#fff; font-weight: 400; font-family: 'Noto Sans KR'; padding:10px 30px; font-size:15px;}
 .btns button:nth-child(2){margin:0 5px;}
 
+
+/* footer style */
+footer{width:100%; height: auto; background: #5F75DF; padding: 15px 0 ; text-align: center; position: fixed; bottom: 0;}
+footer p{color: #fff; font-weight: 400;}

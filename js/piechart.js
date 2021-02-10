@@ -1,5 +1,8 @@
 $(function() {
 
+  $(window).ajaxComplete(function(){
+
+  
     let pieSize=250;
     let liWidth=$(window).width();
     // 브라우저 resize할 때도 변수 읽어줘야
@@ -51,4 +54,6 @@ $(function() {
       }, 150);
 
     });
+
   });
+});
