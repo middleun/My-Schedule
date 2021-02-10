@@ -30,7 +30,7 @@ $(function() {
     $(window).resize(function(){
       let liWidth=$(window).width();
 
-      if(liWidth>401){
+      if(liWidth>400){
         pieSize=250;
       }else{
         pieSize=180;

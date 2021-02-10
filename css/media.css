@@ -1,5 +1,5 @@
 @media screen and (max-width:980px){
-    .center{padding:0 15px;}
+    .center{padding:0 25px;}
 }
 
 
@@ -26,11 +26,18 @@
 }
 
 @media screen and (max-width:400px){
+    /* header title style */
+    header .headerWrap h1{font-size:16px;}
+    
     .container{grid-template-rows: repeat(9,minmax(70px, auto)); }
     .graph-circle p{font-size:18px; font-weight:400;}
 
     .container .subPfBar .pfImg{font-size:20px;}
 
+    /* button style */
+    .btns button{width:33.33%;}
+    
+    /* footer style */
     footer{padding:10px 15px;}
     footer p{font-size: 12px;}
 

@@ -17,7 +17,7 @@
    
 
     // cf. gold project에서 app_update.php 참고 / json파일 연결해야하므로 한 번 더 써줘야 데이터 갱신
-    $sql="select * from schedule_progress order by sch_num=$sch_num";
+    $sql="select * from schedule_progress where sch_num=$sch_num";
 
 
     $sch_result= mysqli_query($dbConn, $sql);

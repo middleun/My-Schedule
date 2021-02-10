@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>My Schedule</title>
+    <title>Input Board</title>
 
 
     <!-- awesomefont cdn link -->
@@ -29,9 +29,9 @@
         <?php include $_SERVER["DOCUMENT_ROOT"]. "/myschedule/include/header.php";?>
       
 
-        <!--  <?php
+        <?php
          include $_SERVER["DOCUMENT_ROOT"]. "/myschedule/include/db_conn.php";
-         $sql="select * from schedule_progress"; 
+         $sql="select * from schedule_progress";
 
          $sch_result=mysqli_query($dbConn, $sql);
          $sch_row=mysqli_fetch_array($sch_result);
@@ -40,23 +40,25 @@
          $sch_api=$sch_row['sch_api'];
          $sch_ren=$sch_row['sch_ren'];
          $sch_pla=$sch_row['sch_pla'];
-        ?>  -->
+        ?>
 
         <!-- Container -->
         <div class="center">
             <form action="/myschedule/php/update_rate.php" method="get" name="updateRate">
-                <div class="container">
+                <div class="inputContainer">
                     <!-- grid up -total and each project progress- -->
                     <?php include $_SERVER["DOCUMENT_ROOT"]. "/myschedule/include/grid_up.php";?>
+
+
+                    <div class="item"></div>
                           
                     <!-- grid down - button -  -->
                     
                     <div class="item btns">
                         <button type="submit">진행률 수정</button>
-                        <button type="button" onclick="javascript:location.href='/myschedule/pages/input_form.php'">진행상황 작성</button>
-                        <button type="button">진행상황 확인</button>
+                        <button type="button">진행 상황 작성</button>
+                        <button type="button">진행 상황 확인</button>
                     </div>
-
 
                 </div>
                 <!-- end of container -->

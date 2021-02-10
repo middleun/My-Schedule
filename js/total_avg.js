@@ -12,8 +12,10 @@ $(function(){
 
             let schAvg = (dbRate * 0.4) + (apiRate * 0.2) + (renRate * 0.1) + (plaRate * 0.3) ;
 
+            console.log(result);
+
             $(".circle-graph-container").html(`
-            <div class="circle-graph easyPieChart" data-percent="60" >
+            <div class="circle-graph easyPieChart" data-percent="${schAvg}" >
              <p>${schAvg}%</p>      
             </div>`);
 
