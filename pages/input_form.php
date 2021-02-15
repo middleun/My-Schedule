@@ -43,23 +43,26 @@
         ?>
 
         <!-- Container -->
-        <div class="center">
+        <div class="center gridWrap">
             
                 <div class="inputContainer">
                     <!-- grid up -total and each project progress- -->
-                    <?php include $_SERVER["DOCUMENT_ROOT"]. "/myschedule/include/grid_up.php";?>
+                    <?php 
+                    
+                    include $_SERVER["DOCUMENT_ROOT"]. "/myschedule/include/grid_up.php";
+                    ?>
 
 
                     <div class="item inputBox">
                         <form action="/myschedule/php/schedule_input.php" method="post" name="schInputForm" >
-                            <select name="projectCate" id="" class="projectCate">
+                            <select name="projectCate"  class="projectCate">
                                 <option value="dbProject">Database Project</option>
                                 <option value="apiProject">API Project</option>
                                 <option value="renProject">Renewal Project</option>
                                 <option value="plaProject">Web Planning Project</option>
                             </select>
                             <input type="text" name="projectTit" class="projectTit" placeholder="일정 제목을 입력해주세요">
-                            <textarea name="projectCon" id="" class="projectCon" placeholder="일정 상세 내용을 입력해주세요"></textarea>
+                            <textarea name="projectCon"  class="projectCon" placeholder="일정 상세 내용을 입력해주세요"></textarea>
                         </form>
 
                     </div>

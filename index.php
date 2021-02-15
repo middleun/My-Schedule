@@ -29,7 +29,7 @@
         <?php include $_SERVER["DOCUMENT_ROOT"]. "/myschedule/include/header.php";?>
       
 
-        <!--  <?php
+        <?php
          include $_SERVER["DOCUMENT_ROOT"]. "/myschedule/include/db_conn.php";
          $sql="select * from schedule_progress"; 
 
@@ -40,14 +40,23 @@
          $sch_api=$sch_row['sch_api'];
          $sch_ren=$sch_row['sch_ren'];
          $sch_pla=$sch_row['sch_pla'];
-        ?>  -->
+        ?> 
 
         <!-- Container -->
-        <div class="center">
+        <div class="center gridWrap">
             <form action="/myschedule/php/update_rate.php" method="get" name="updateRate">
                 <div class="container">
-                    <!-- grid up -total and each project progress- -->
-                    <?php include $_SERVER["DOCUMENT_ROOT"]. "/myschedule/include/grid_up.php";?>
+
+                <!-- grid up -total and each project progress- -->
+
+                    <?php
+                      include $_SERVER["DOCUMENT_ROOT"]. "/myschedule/include/latest_date.php";                                               
+                      include $_SERVER["DOCUMENT_ROOT"]. "/myschedule/include/grid_up.php";              
+
+                    
+                   
+
+                    ?>
                           
                     <!-- grid down - button -  -->
                     
