@@ -10,17 +10,3 @@
     </div>    
 </header>
 
-<script>
-
-  const pathname=window.location.pathname;
-  const changeTit=document.querySelector('#title');
-  
-  
-  if(pathname.includes('input_form')){
-      changeTit.innerHTML="Schedule Input";
-   
-  }
-
-
-  
-</script>

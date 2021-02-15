@@ -44,28 +44,40 @@
 
         <!-- Container -->
         <div class="center">
-            <form action="/myschedule/php/update_rate.php" method="get" name="updateRate">
+            
                 <div class="inputContainer">
                     <!-- grid up -total and each project progress- -->
                     <?php include $_SERVER["DOCUMENT_ROOT"]. "/myschedule/include/grid_up.php";?>
 
 
-                    <div class="item"></div>
+                    <div class="item inputBox">
+                        <form action="/myschedule/php/schedule_input.php" method="post" name="schInputForm" >
+                            <select name="projectCate" id="" class="projectCate">
+                                <option value="dbProject">Database Project</option>
+                                <option value="apiProject">API Project</option>
+                                <option value="renProject">Renewal Project</option>
+                                <option value="plaProject">Web Planning Project</option>
+                            </select>
+                            <input type="text" name="projectTit" class="projectTit" placeholder="일정 제목을 입력해주세요">
+                            <textarea name="projectCon" id="" class="projectCon" placeholder="일정 상세 내용을 입력해주세요"></textarea>
+                        </form>
+
+                    </div>
                           
                     <!-- grid down - button -  -->
                     
                     <div class="item btns">
-                        <button type="submit">진행률 수정</button>
-                        <button type="button">진행 상황 작성</button>
+                        <button type="button" onclick="schInput()">진행 상황 작성</button>
                         <button type="button">진행 상황 확인</button>
                     </div>
+
+                  
 
                 </div>
                 <!-- end of container -->
 
 
-            </form>    
-            <!--end of form table  -->
+         
 
         </div>
         <!--end of center  -->
@@ -88,6 +100,26 @@
     <script src="/myschedule/js/custom.js"></script>
 
     <script src="/myschedule/js/total_avg.js"></script>
+
+    <script>
+        function schInput(){
+            if(!document.schInputForm.projectTit.value){
+                alert('일정 제목을 입력해주세요');
+                document.schInputForm.projectTit.focus();
+                return false;
+            }
+            if(!document.schInputForm.projectCon.value){
+                alert('일정 상세 내용을 입력해주세요');
+                document.schInputForm.projectCon.focus();
+                return false;
+            }    
+            
+            document.schInputForm.submit();
+            
+        }
+    </script>
+
+    
 
 
 </body>
