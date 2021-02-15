@@ -48,7 +48,8 @@
                 <div class="inputContainer">
                     <!-- grid up -total and each project progress- -->
                     <?php 
-                    
+
+                    include $_SERVER["DOCUMENT_ROOT"]. "/myschedule/include/latest_date.php";                     
                     include $_SERVER["DOCUMENT_ROOT"]. "/myschedule/include/grid_up.php";
                     ?>
 
