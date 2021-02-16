@@ -26,7 +26,11 @@
 
                 }
             
-            }
+            }else if(pathname.includes('sch_view')){
+                changeTit.innerHTML="Schedule Board";
+
+                
+            }        
 
 
 

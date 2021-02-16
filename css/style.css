@@ -19,7 +19,7 @@ header .headerWrap .mIcon span:nth-child(3){width:70%;}
 
 .container{width:100%; height: auto; display:grid; grid-template-columns: repeat(2, 1fr); grid-template-rows: repeat(5,minmax(100px, auto)); gap:5px;
 padding:20px 0;}
-.item{border:1px solid #ccc; background: #fff; }
+.item{border:1px solid #DDE4F7; background: #fff; }
 .item:nth-child(1){grid-row:1/5; display:flex; justify-content: center;align-items: center; padding:30px 0;}
 .item:nth-child(6){grid-column:1/3;}
 
@@ -51,7 +51,7 @@ canvas {position: absolute;}
 /* button box style */
 .btns{display:flex; align-items:center; justify-content: flex-end; 
     padding:10px;}
-.btns button{border:1px solid #5F75DF; background: #5F75DF;
+.btns button, a.schInput{border:1px solid #5F75DF; background: #5F75DF;
 color:#fff; font-weight: 400; font-family: 'Noto Sans KR'; padding:10px 30px; font-size:15px;}
 .btns button:nth-child(2){margin:0 5px;}
 
@@ -64,7 +64,7 @@ footer p{color: #fff; font-weight: 400;}
 /* input form page style */
 .inputContainer{width:100%; height: auto; display:grid; grid-template-columns: repeat(2, 1fr); grid-template-rows: repeat(6,minmax(100px, auto)); gap:5px;
 padding:20px 0;}
-.inputContainer .item{border:1px solid #ccc; background: #fff; }
+.inputContainer .item{border:1px solid #DDE4F7; background: #fff; }
 .inputContainer .item:nth-child(1){grid-row-start:1/5; display:flex; justify-content: center;align-items: center; padding:30px 0;}
 .inputContainer .item:nth-child(6){grid-column:1/3;}
 .inputContainer .item:nth-child(7){grid-column:1/3;}
@@ -82,3 +82,28 @@ padding:5px; font-family:'Noto Sans KR';}
 .inputContainer .item.inputBox .projectTit:focus{border:1px solid #5F75DF;}
 .inputContainer .item.inputBox .projectCon:focus{border:1px solid #5F75DF;}
 
+/* Schedule Board Page Style */
+.item.boardBox{padding:10px; _display:flex; _flex-wrap:wrap; _justify-content: space-between; }
+.item.boardBox .boardTable{width:100%; height: auto; border-bottom:1px solid #DDE4F7;}
+.item.boardBox .boardTable li:last-child{}
+.item.boardBox .boardTable li:nth-child(odd){background: #F3F6FB;}
+.item.boardBox .boardTable .boardTitle,
+.item.boardBox .boardTable .boardList
+{width:100%; height: auto; display: flex; justify-content: center; align-items: center; }
+.item.boardBox .boardTable li.boardTitle{background: #5F75DF;}
+
+.item.boardBox .boardTable span{font-family: 'Noto Sans KR'; text-align: center; padding:8px 0;}
+.item.boardBox .boardTable .boardTitle span{color:#fff;}
+.item.boardBox .boardTable span.boNum{width:10%;}
+.item.boardBox .boardTable span.boCat{width:20%;}
+.item.boardBox .boardTable span.boTit{width:50%; overflow:hidden; white-space:nowrap; text-overflow:ellipsis;}
+.item.boardBox .boardTable span.boReg{width:20%;}
+
+.loadMore{width:100%; height: auto; margin-top:5px; display: flex; justify-content: center; }
+.loadMore button{outline:0; border:1px solid #5F75DF; background: #5F75DF; padding:10px 30px; color: #fff; 
+font-family: 'Noto Sans KR' ;}
+
+.categoryTabs{width:100%; height: auto;}
+.categoryTabs a{display:inline-block; border: 1px solid #DDE4F7; background: #DDE4F7; color:#5F75DF; 
+font-family: 'Noto Sans KR';  padding: 5px 15px; margin-bottom: 5px;}
+.categoryTabs a.active{border: 1px solid #5F75DF; background: #5F75DF;color: #fff;}

@@ -27,6 +27,10 @@
 
     /* footer style */
     footer{position:relative;}
+
+    /* schedule board page style */
+    .item.boardBox .boardTable span{font-size:12px;}
+
     
 
 }
@@ -36,6 +40,14 @@
     .inputContainer .item.inputBox .projectCate{font-size: 12px; width:100%;}
     .inputContainer .item.inputBox .projectTit{font-size: 12px;width:100%; margin-top: 5px;}
     .inputContainer .item.inputBox .projectCon{ font-size: 12px;}
+
+    /* schedule board page style */
+    .item.boardBox .boardTable span.boNum{display:none;}
+    .item.boardBox .boardTable span.boReg{width:30%;}
+
+    .categoryTabs{text-align: center;}
+
+
 
 }
 
@@ -55,6 +67,11 @@
     /* footer style */
     footer{padding:10px 15px;}
     footer p{font-size: 12px;}
+
+    /* schedule board page style */
+    .item.boardBox .boardTable span.boCat{display:none;}
+    .item.boardBox .boardTable span.boTit{width:60%;}
+    .item.boardBox .boardTable span.boReg{width:40%;}
 
     
 }
