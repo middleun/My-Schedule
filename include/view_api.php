@@ -35,7 +35,7 @@
                             <li class="boardList">
                                 <span class="boNum"><?=$bo_num?></span>
                                 <span class="boCat"><?=$bo_cat?></span>
-                                <span class="boTit"><a href="#"><?=$bo_tit?></a></span>
+                                <span class="boTit"><a href="/myschedule/pages/detail_view.php?num=<?=$bo_num?>"><?=$bo_tit?></a></span>
                                 <span class="boReg"><?=$bo_reg?></span>
                             </li>
 

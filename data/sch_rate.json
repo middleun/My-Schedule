@@ -1,8 +1,8 @@
 [
     {
         "db_rate": "70",
-        "api_rate": "20",
-        "ren_rate": "20",
-        "pla_rate": "65"
+        "api_rate": "0",
+        "ren_rate": "10",
+        "pla_rate": "90"
     }
 ]

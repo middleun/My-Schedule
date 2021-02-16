@@ -51,7 +51,8 @@ canvas {position: absolute;}
 /* button box style */
 .btns{display:flex; align-items:center; justify-content: flex-end; 
     padding:10px;}
-.btns button, a.schInput{border:1px solid #5F75DF; background: #5F75DF;
+.btns button, 
+.btns a.schInput{border:1px solid #5F75DF; background: #5F75DF;
 color:#fff; font-weight: 400; font-family: 'Noto Sans KR'; padding:10px 30px; font-size:15px;}
 .btns button:nth-child(2){margin:0 5px;}
 
@@ -85,7 +86,7 @@ padding:5px; font-family:'Noto Sans KR';}
 /* Schedule Board Page Style */
 .item.boardBox{padding:10px; _display:flex; _flex-wrap:wrap; _justify-content: space-between; }
 .item.boardBox .boardTable{width:100%; height: auto; border-bottom:1px solid #DDE4F7;}
-.item.boardBox .boardTable li:last-child{}
+/* .item.boardBox .boardTable li:last-child{} */
 .item.boardBox .boardTable li:nth-child(odd){background: #F3F6FB;}
 .item.boardBox .boardTable .boardTitle,
 .item.boardBox .boardTable .boardList
@@ -107,3 +108,24 @@ font-family: 'Noto Sans KR' ;}
 .categoryTabs a{display:inline-block; border: 1px solid #DDE4F7; background: #DDE4F7; color:#5F75DF; 
 font-family: 'Noto Sans KR';  padding: 5px 15px; margin-bottom: 5px;}
 .categoryTabs a.active{border: 1px solid #5F75DF; background: #5F75DF;color: #fff;}
+
+/* detail view page style */
+.item.viewBox{padding:10px; }
+
+.item.viewBox .detailTit{width:100%; height:auto; padding-left:15px; border-left: 2px solid #5F75DF; margin-bottom: 10px;}
+.item.viewBox .detailTit h2{font-size:16px; font-weight: 700; font-family: 'Noto Sans KR'; color:#555;}
+
+.item.viewBox .viewTable{width:100%; height: auto; border-bottom:1px solid #DDE4F7;}
+.item.viewBox .viewTable .viewTitle,
+.item.viewBox .viewTable .viewList
+{width:100%; height: auto; display: flex; justify-content: center; align-items: center; }
+.item.viewBox .viewTable li.viewTitle{background: #5F75DF;}
+
+.item.viewBox .viewTable span{font-family: 'Noto Sans KR'; text-align: center; padding:8px 0;}
+.item.viewBox .viewTable .viewTitle span{color:#fff;}
+.item.viewBox .viewTable span.boNum{width:10%;}
+.item.viewBox .viewTable span.boCat{width:20%;}
+.item.viewBox .viewTable span.boCon{width:50%; overflow:hidden; white-space:nowrap; text-overflow:ellipsis; }
+.item.viewBox .viewTable .viewList span.boCon{text-align: left;}
+.item.viewBox .viewTable span.boCon em{font-style: normal; line-height: 2;}
+.item.viewBox .viewTable span.boReg{width:20%;}
