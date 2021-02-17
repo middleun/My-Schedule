@@ -5,15 +5,28 @@
 
 /* Header Style */
 header{width:100%; height:auto; background: #5F75DF; color:#fff; text-transform: uppercase; }
-header .headerWrap{display:flex; align-items: center;justify-content: space-between;}
+header .headerWrap{display:flex; align-items: center;justify-content: space-between; position:relative;}
 header .headerWrap a{color:#fff; font-size:22px; }
-header .headerWrap h1{font-weight:400; font-size:22px; padding:10px 0; letter-spacing: 1.5px;}
 
-header .headerWrap .mIcon{width:30px; height:auto;  display:flex; flex-wrap:wrap; justify-content: flex-end; cursor: pointer; }
-header .headerWrap .mIcon span{width:100%; height: 2px; background: #fff;}
+
+header .headerWrap .mIcon{width:50px; height:auto;  display:flex; flex-wrap:wrap; justify-content: flex-end; cursor: pointer; padding:10px; 
+margin-right:2px;}
+header .headerWrap .mIcon span{width:100%; height: 2px; background: #fff; display:block; transition: all 0.4s;;}
 /* header .headerWrap .mIcon span:nth-child(1){} */
 header .headerWrap .mIcon span:nth-child(2){margin: 5px 0; width:50%;}
 header .headerWrap .mIcon span:nth-child(3){width:70%;}
+/* header .headerWrap .mIcon:hover span{width:100%;} */
+header .headerWrap .mIcon.on{background:#6e83eb;}
+header .headerWrap .mIcon.on span{width:100%;}
+
+header .headerWrap h1{font-weight:400; font-size:22px; padding:10px 0; }
+
+/* Hidden Header Style */
+.hiddenHeader{position:absolute; top:100%; right:0; z-index:999;}
+.hiddenHeader .depth-1{display:none;}
+.hiddenHeader .depth-1 li{margin-top: 1px;}
+.hiddenHeader .depth-1 li a{display:block; background: #5F75DF; color: #fff; padding: 15px; border: 1px solid #5F75DF;}
+.hiddenHeader .depth-1 li a:hover{background:#6e83eb;}
 
 /* Container Style */
 

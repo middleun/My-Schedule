@@ -1,5 +1,7 @@
 @media screen and (max-width:980px){
     .center{padding:0 25px;}
+    .hiddenHeader{right:25px; }
+
 }
 
 
