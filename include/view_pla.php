@@ -1,9 +1,9 @@
-<div class="categoryTabs">
-                            <a href="/myschedule/pages/sch_view.php?key=view_all">All</a>
-                            <a href="/myschedule/pages/sch_view.php?key=view_db">Database</a>
-                            <a href="/myschedule/pages/sch_view.php?key=view_api">API</a>
-                            <a href="/myschedule/pages/sch_view.php?key=view_ren" >Renewal</a>
-                            <a href="/myschedule/pages/sch_view.php?key=view_pla" class="active">Web Planning</a>
+                        <div class="categoryTabs">
+                            <a href="/myschedule/pages/sch_view.php?key=view_all" >All</a>
+                            <a href="/myschedule/pages/sch_view.php?key=view_db"><i class="fa fa-database"></i></a>
+                            <a href="/myschedule/pages/sch_view.php?key=view_api"><i class="fa fa-cloud-sun"></i></a>
+                            <a href="/myschedule/pages/sch_view.php?key=view_ren"><i class="fa fa-clone"></i></a>
+                            <a href="/myschedule/pages/sch_view.php?key=view_pla" class="active"><i class="fa fa-chart-bar"></i></a>
                         </div>
                         <ul class="boardTable">
                             <li class="boardTitle">

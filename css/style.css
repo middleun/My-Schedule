@@ -53,9 +53,9 @@ canvas {position: absolute;}
 .subPfBar .pfImg i{color:#5F75DF;}
 .subPfBar .pfContents{width:85%;}
 .subPfBar .pfContents h3{font-size:14px; font-weight: 600;}
-.subPfBar .pfContents p{font-size:12px; font-weight: 300; margin:0 0 5px;}
+.subPfBar .pfContents p{font-size:12px; font-weight: 400; margin:0 0 5px;}
 .subPfBar .pfContents p b{font-weight: normal;}
-.subPfBar .pfContents .rateNum{font-size:12px; font-weight: 300; width:25px; text-align:right; border:0; outline:0;}
+.subPfBar .pfContents .rateNum{font-size:12px; font-weight: 300; width:25px; text-align:right; border:0; outline:0;font-family: 'Noto Sans KR'}
 .subPfBar .pfContents .rateNum:focus{border:1px solid #5F75DF;}
 .subPfBar .pfBarBox{padding:5px 0; border:1px solid #ccc; border-radius: 10px; background:#DDE4F7;}
 .subPfBar .pfBarBox .pfBar{display:block; width:0; height:15px; background: #5F75DF; border-radius: 0 10px 10px 0;}
@@ -87,11 +87,11 @@ padding:20px 0;}
 
 /* input Box Style */
 .inputContainer .item.inputBox{padding:10px; _display:flex; _flex-wrap:wrap; _justify-content: space-between;}
-.inputContainer .item.inputBox .projectCate{width:30%; height:40px; border:1px solid #ccc; border-radius: 0; outline:0; padding:5px;
-font-family:'Montserrat'; display:block; float:left;}
-.inputContainer .item.inputBox .projectTit{width:calc(70% - 5px); height: 40px; padding:5px; border:1px solid #ccc;
+.inputContainer .item.inputBox .projectCate{width:30%; height:40px; border:1px solid #DDE4F7; border-radius: 0; outline:0; padding:5px;
+font-family:'Montserrat'; display:block; float:left; cursor: pointer;}
+.inputContainer .item.inputBox .projectTit{width:calc(70% - 5px); height: 40px; padding:5px; border:1px solid #DDE4F7;
 font-family:'Noto Sans KR'; display:block; float:right;}
-.inputContainer .item.inputBox .projectCon{width:100%; height: 150px; border:1px solid #ccc; margin-top: 7px; resize:none; 
+.inputContainer .item.inputBox .projectCon{width:100%; height: 150px; border:1px solid #DDE4F7; margin-top: 7px; resize:none; 
 padding:5px; font-family:'Noto Sans KR';}
 .inputContainer .item.inputBox .projectTit:focus{border:1px solid #5F75DF;}
 .inputContainer .item.inputBox .projectCon:focus{border:1px solid #5F75DF;}

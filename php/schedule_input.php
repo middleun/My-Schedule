@@ -1,3 +1,6 @@
+<meta charset="UTF-8" />
+
+
 <?php
 
 $sch_cate=$_POST['projectCate'];

@@ -14,7 +14,7 @@
 
         .authForm input{width:200px; height:35px; border: 1px solid #5F75DF; outline:0; padding:5px; display:block; float:left; margin-right:5px;
         }
-        .authForm input::placeholder{background:#F3F6FB;}
+       
         .authForm button{width:50px; height:35px; border:1px solid #5f75df; background:#5f75df; color:#fff; text-align:center;display:block; float:right;
             cursor:pointer;}
         /* .authForm button[type="submit"] {font-family:FontAwesome;} */

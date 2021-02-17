@@ -61,6 +61,7 @@
                                 <option value="apiProject">API Project</option>
                                 <option value="renProject">Renewal Project</option>
                                 <option value="plaProject">Web Planning Project</option>
+                                
                             </select>
                             <input type="text" name="projectTit" class="projectTit" placeholder="일정 제목을 입력해주세요">
                             <textarea name="projectCon"  class="projectCon" placeholder="일정 상세 내용을 입력해주세요"></textarea>

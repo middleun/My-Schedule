@@ -50,7 +50,8 @@
     .item.boardBox .boardTable span.boNum{display:none;}
     .item.boardBox .boardTable span.boReg{width:30%;}
 
-    .categoryTabs{text-align: center;}
+    .categoryTabs{text-align: center; }
+    .categoryTabs a{padding:10px;}
 
     /* Detail View page Style */
     .item.viewBox .viewTable span.boNum{display:none;}
@@ -80,9 +81,14 @@
 
     .container .subPfBar .pfImg{font-size:20px;}
 
+    /* grid-up subPfBar text style */
+    .subPfBar .pfContents p{display:flex;flex-wrap:wrap;}
+
     /* button style */
     .btns button,
     .btns a{width:33.33%;}
+    .btns button, .btns a, .loadMore button, .btns a.schInput{padding:8px 10px;}
+    .subBtn button{padding:5px 5px;}
     
     /* footer style */
     footer{padding:10px 15px;}
@@ -97,6 +103,9 @@
     .item.viewBox .viewTable span.boCat{display:none;}
     .item.viewBox .viewTable span.boCon{width:70%;}
     .item.viewBox .viewTable span.boReg{width:30%;}
+
+
+    
 
     
 }

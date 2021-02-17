@@ -3,10 +3,12 @@
 session_start();
 if(isset($_SESSION['usercode'])){
     $usercode=$_SESSION['usercode'];
+    setcookie('PHPSESSID','6allokb14h7tq1l5mu5il3od20', time()+ 600, '/');
+
 }else{
     echo"
         <script>
-            location.href='/myschedule/index.php';
+            location.href='/myschedule/pages/auth_form.php';
         </script>
     ";
 }
