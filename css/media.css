@@ -25,9 +25,8 @@
 
     /* button Box Style */
     .btns{justify-content: center;}
-    .btns button,
-    .btns a
-    {border:5px 20px; font-size:12px;}
+    .btns button, .btns a, .loadMore button, .subBtn button, .btns a.schInput{border:5px 20px; font-size:12px;}
+    
 
     /* footer style */
     footer{position:relative;}
@@ -55,9 +54,16 @@
 
     /* Detail View page Style */
     .item.viewBox .viewTable span.boNum{display:none;}
+    .item.viewBox .viewTable span.boCat{display:none;}
+    .item.viewBox .viewTable span.boCon{width:70%;}
     .item.viewBox .viewTable span.boReg{width:30%;}
 
     .item.viewBox .detailTit h2{font-size: 14px;;}
+
+    /* schedule board page hidden input style */
+    .hiddenTit,
+    .hiddenCon{width:100%; font-size: 12px;}
+
 
 
 
@@ -89,8 +95,8 @@
 
     /* Detail View page Style */
     .item.viewBox .viewTable span.boCat{display:none;}
-    .item.viewBox .viewTable span.boCon{width:60%;}
-    .item.viewBox .viewTable span.boReg{width:40%;}
+    .item.viewBox .viewTable span.boCon{width:70%;}
+    .item.viewBox .viewTable span.boReg{width:30%;}
 
     
 }

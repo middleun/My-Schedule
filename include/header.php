@@ -6,7 +6,7 @@ if(isset($_SESSION['usercode'])){
 }else{
     echo"
         <script>
-            location.href='/myschedule/pages/auth_form.php';
+            location.href='/myschedule/index.php';
         </script>
     ";
 }
@@ -17,7 +17,7 @@ if(isset($_SESSION['usercode'])){
 
 <header>
     <div class="center headerWrap">
-    <a href="/myschedule/index.php"><i class= "fa fa-home"></i></a>
+    <a href="/myschedule/php/sign_out.php"><i class= "fa fa-sign-out-alt"></i></a>
         <h1 id="title">Schedule Dashboard</h1>
         <div class="mIcon">
             <span></span>
