@@ -19,7 +19,7 @@
                         </div>
                         <div class="pfContents">
                             <h3>Database Project</h3>
-                            <p>Progress Rate : <input type="text" value="<?=$sch_db?>" class="rateNum dbNum" name="sch_db_rate">% || 
+                            <p>Progress Rate : <input type="text" value="<?=$sch_db?>" class="rateNum" name="sch_db_rate">% || 
                             <span>Last Update : <b><?=$db_date?></b></span></p>
                             <div class="pfBarBox">
                                 <span class="pfBar"></span>
