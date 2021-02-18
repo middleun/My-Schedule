@@ -2,6 +2,7 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
+   
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>My Schedule</title>
@@ -61,7 +62,7 @@
                     <!-- grid down - button -  -->
                     
                     <div class="item btns">
-                        <button type="submit">진행률 수정</button>
+                        <button type="button" onclick="updateSubmit()">진행률 수정</button>
                         <button type="button" onclick="javascript:location.href='/myschedule/pages/input_form.php'">진행상황 작성</button>
                         <button type="button" onclick="javascript:location.href='/myschedule/pages/sch_view.php?key=view_all'">진행상황 확인</button>
                     </div>
@@ -76,6 +77,8 @@
 
         </div>
         <!--end of center  -->
+       
+
 
         <!-- footer -->
         <?php include $_SERVER["DOCUMENT_ROOT"]. "/myschedule/include/footer.php";?>
@@ -95,6 +98,36 @@
     <script src="/myschedule/js/custom.js"></script>
 
     <script src="/myschedule/js/total_avg.js"></script>
+
+    <script>
+        function.updateSubmit(){
+            if(document.updateRate.sch_db_rate.value>100){
+                alert("100이하의 숫자를 입력하세요");
+                document.updateRate.sch_db_rate.focus();
+                return;
+            }
+            if(document.updateRate.sch_api_rate.value>100){
+                alert("100이하의 숫자를 입력하세요");
+                document.updateRate.sch_api_rate.focus();
+                return;
+            }
+            if(document.updateRate.sch_ren_rate.value>100){
+                alert("100이하의 숫자를 입력하세요");
+                document.updateRate.sch_ren_rate.focus();
+                return;
+            }
+            if(document.updateRate.sch_pla_rate.value>100){
+                alert("100이하의 숫자를 입력하세요");
+                document.updateRate.sch_pla_rate.focus();
+                return;
+            }
+
+            document.updateSubmit();
+        }
+    </script>
+
+
+    
 
 
 </body>
