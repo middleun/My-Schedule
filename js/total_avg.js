@@ -6,7 +6,7 @@ $(function(){
 
             let obj=JSON.parse(result);
 
-            console.log(obj);
+            // console.log(obj);
 
             let dbRate = Number(obj[0].db_rate);
             let apiRate = Number(obj[0].api_rate);

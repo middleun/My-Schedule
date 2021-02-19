@@ -99,7 +99,7 @@
     <script src="/myschedule/js/total_avg.js"></script>
 
     <script>
-        function.updateSubmit(){
+        function updateSubmit(){
             if(document.updateRate.sch_db_rate.value>100){
                 alert("100이하의 숫자를 입력하세요");
                 document.updateRate.sch_db_rate.focus();
@@ -121,7 +121,7 @@
                 return;
             }
 
-            document.updateSubmit();
+            document.updateRate.submit();
         }
     </script>
 
