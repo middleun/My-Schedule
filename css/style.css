@@ -110,14 +110,16 @@ padding:5px; font-family:'Noto Sans KR';}
 .item.boardBox .boardTable .boardTitle span{color:#fff;}
 .item.boardBox .boardTable span.boNum{width:10%;}
 .item.boardBox .boardTable span.boCat{width:20%;}
-.item.boardBox .boardTable span.boTit{width:50%; overflow:hidden; white-space:nowrap; text-overflow:ellipsis;}
+.item.boardBox .boardTable span.boTit{width:50%; overflow:hidden; white-space:nowrap; 
+text-overflow:ellipsis;   }
+.item.boardBox .boardTable .boardList span.boTit{text-align:left;}
 .item.boardBox .boardTable span.boReg{width:20%;}
 
 .loadMore,
-.subBtn{width:100%; height: auto; margin-top:5px; display: flex; justify-content: center; cursor:pointer;}
+.subBtn{width:100%; height: auto; margin-top:5px; display: flex; justify-content: center; }
 .loadMore button,
 .subBtn button{outline:0; border:1px solid #5F75DF; background: #5F75DF;  color: #fff; 
-font-family: 'Noto Sans KR' ;}
+font-family: 'Noto Sans KR' ; cursor:pointer;} 
 .loadMore button{padding:10px 30px;}
 .subBtn button{padding:5px 10px; }
 .subBtn{display:none}
