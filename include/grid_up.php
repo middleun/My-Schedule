@@ -59,8 +59,8 @@
                         </div>
                         <div class="pfContents">
                             <h3>Web Planning Project</h3>
-                            <p>Progress Rate : <input type="text" value="<?=$sch_pla?>" class="rateNum" name="sch_pla_rate">% || 
-                            <span>Last Update : <b><?=$pla_date?></b></span></p>
+                            <p>Progress Rate : <input type="text" value="<?=$sch_web?>" class="rateNum" name="sch_web_rate">% || 
+                            <span>Last Update : <b><?=$web_date?></b></span></p>
                             <div class="pfBarBox">
                                 <span class="pfBar"></span>
                             </div>

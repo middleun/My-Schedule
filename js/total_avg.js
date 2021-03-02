@@ -11,11 +11,11 @@ $(function(){
             let dbRate = Number(obj[0].db_rate);
             let apiRate = Number(obj[0].api_rate);
             let renRate = Number(obj[0].ren_rate);
-            let plaRate = Number(obj[0].pla_rate);
+            let webRate = Number(obj[0].web_rate);
 
             // console.log(apiRate + typeof(apiRate));
 
-            let schAvg = (dbRate * 0.4) + (apiRate * 0.2) + (renRate * 0.1) + (plaRate * 0.3) ;
+            let schAvg = (dbRate * 0.4) + (apiRate * 0.2) + (renRate * 0.1) + (webRate * 0.3) ;
 
             
 

@@ -31,7 +31,7 @@
 
         <?php
          include $_SERVER["DOCUMENT_ROOT"]. "/myschedule/include/db_conn.php";
-         $sql="select * from schedule_progress";
+         $sql="select * from sch_progress";
 
          $sch_result=mysqli_query($dbConn, $sql);
          $sch_row=mysqli_fetch_array($sch_result);
@@ -39,7 +39,7 @@
          $sch_db=$sch_row['sch_db'];
          $sch_api=$sch_row['sch_api'];
          $sch_ren=$sch_row['sch_ren'];
-         $sch_pla=$sch_row['sch_pla'];
+         $sch_web=$sch_row['sch_web'];
         ?>
 
         <!-- Container -->
@@ -60,7 +60,7 @@
                                 <option value="dbProject">Database Project</option>
                                 <option value="apiProject">API Project</option>
                                 <option value="renProject">Renewal Project</option>
-                                <option value="plaProject">Web Planning Project</option>
+                                <option value="webProject">Web Planning Project</option>
                                 
                             </select>
                             <input type="text" name="projectTit" class="projectTit" placeholder="일정 제목을 입력해주세요">

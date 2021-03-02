@@ -6,13 +6,13 @@
     $sch_db=$_REQUEST['sch_db_rate'];
     $sch_api=$_REQUEST['sch_api_rate'];
     $sch_ren=$_REQUEST['sch_ren_rate'];
-    $sch_pla=$_REQUEST['sch_pla_rate'];
+    $sch_web=$_REQUEST['sch_web_rate'];
 
-    // echo $sch_db, $sch_api, $sch_ren, $sch_pla;
+    // echo $sch_db, $sch_api, $sch_ren, $sch_web;
 
 
     include $_SERVER["DOCUMENT_ROOT"]. "/myschedule/include/db_conn.php";
-    $sql="UPDATE schedule_progress SET sch_db=$sch_db, sch_api=$sch_api, sch_ren=$sch_ren, sch_pla=$sch_pla
+    $sql="UPDATE sch_progress SET sch_db=$sch_db, sch_api=$sch_api, sch_ren=$sch_ren, sch_web=$sch_web
     where sch_num=$sch_num";
 
     mysqli_query($dbConn, $sql);
@@ -20,7 +20,7 @@
    
 
     // cf. gold project에서 app_update.php 참고 / json파일 연결해야하므로 한 번 더 써줘야 데이터 갱신
-    $sql="select * from schedule_progress where sch_num=$sch_num";
+    $sql="select * from sch_progress where sch_num=$sch_num";
 
 
     $sch_result= mysqli_query($dbConn, $sql);
@@ -34,14 +34,14 @@
             'db_rate' => $sch_row['sch_db'],
             'api_rate' => $sch_row['sch_api'],
             'ren_rate' => $sch_row['sch_ren'],
-            'pla_rate' => $sch_row['sch_pla']
+            'web_rate' => $sch_row['sch_web']
             
         ));
     }
 
      //   make json file
      file_put_contents($_SERVER['DOCUMENT_ROOT'].'/myschedule/data/sch_rate.json',json_encode($arr, JSON_PRETTY_PRINT));
-    //  encode와 decode의 차이???머지?
+    //  encode와 decode의 차이???
     //  다른 파일을 json으로 바꿀 때는 encode 
 
 

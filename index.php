@@ -33,7 +33,7 @@
 
         <?php
          include $_SERVER["DOCUMENT_ROOT"]. "/myschedule/include/db_conn.php";
-         $sql="select * from schedule_progress"; 
+         $sql="select * from sch_progress"; 
 
          $sch_result=mysqli_query($dbConn, $sql);
          $sch_row=mysqli_fetch_array($sch_result);
@@ -41,7 +41,7 @@
          $sch_db=$sch_row['sch_db'];
          $sch_api=$sch_row['sch_api'];
          $sch_ren=$sch_row['sch_ren'];
-         $sch_pla=$sch_row['sch_pla'];
+         $sch_web=$sch_row['sch_web'];
         ?> 
 
         <!-- Container -->
@@ -115,9 +115,9 @@
                 document.updateRate.sch_ren_rate.focus();
                 return;
             }
-            if(document.updateRate.sch_pla_rate.value>100){
+            if(document.updateRate.sch_web_rate.value>100){
                 alert("100이하의 숫자를 입력하세요");
-                document.updateRate.sch_pla_rate.focus();
+                document.updateRate.sch_web_rate.focus();
                 return;
             }
 

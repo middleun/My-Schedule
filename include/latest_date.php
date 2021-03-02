@@ -41,15 +41,15 @@
 
 
    // web planning project latest date
-   $pla_date_sql="select * from sch_txt where sch_txt_cat='plaProject' order by sch_txt_num desc limit 1";
-   $pla_date_result=mysqli_query($dbConn, $pla_date_sql);
-   $pla_date_row=mysqli_fetch_array($pla_date_result);         
+   $web_date_sql="select * from sch_txt where sch_txt_cat='webProject' order by sch_txt_num desc limit 1";
+   $web_date_result=mysqli_query($dbConn, $web_date_sql);
+   $web_date_row=mysqli_fetch_array($web_date_result);         
 
-   if(!$pla_date_row){
-      $pla_date = "No Data";
+   if(!$web_date_row){
+      $web_date = "No Data";
 
    }else{
-      $pla_date=$pla_date_row['sch_txt_reg'];
+      $web_date=$web_date_row['sch_txt_reg'];
    }
    
 

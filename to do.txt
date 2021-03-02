@@ -4,7 +4,7 @@
 -> confirm창 띄우기 ( 작성중인 일정이 있습니다. 작성을 그만두시겠습니까? ......)
 
 2. plaProject -> webProject로 다 바꾸기 
-( 처음에 db에 pla로 적어서 통일시켰는데 wep planning 대표성 부족 )
+( 처음에 db에 pla로 적어서 통일시켰는데 wep planning 대표성 부족 )✔
 
 3. 쿠키삭제 시간 더 길게 늘리기 ( 작성 후 확인 누르면 저장 안됨 )
 
