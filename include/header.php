@@ -3,7 +3,7 @@
 session_start();
 if(isset($_SESSION['usercode'])){
     $usercode=$_SESSION['usercode'];
-    setcookie('PHPSESSID','6allokb14h7tq1l5mu5il3od20', time()+ 600, '/');
+    setcookie('PHPSESSID','6allokb14h7tq1l5mu5il3od20', time()+ 1000, '/');
 
 }else{
     echo"
