@@ -3,7 +3,7 @@
 session_start();
 if(isset($_SESSION['usercode'])){
     $usercode=$_SESSION['usercode'];
-    setcookie('PHPSESSID','6allokb14h7tq1l5mu5il3od20', time()+ 1000, '/');
+    setcookie('PHPSESSID','6allokb14h7tq1l5mu5il3od20', time()+ 10000, '/');
 
 }else{
     echo"
@@ -20,7 +20,7 @@ if(isset($_SESSION['usercode'])){
 <header>
     <div class="center headerWrap">
     <a href="/myschedule/php/sign_out.php"><i class= "fa fa-sign-out-alt"></i></a>
-        <h1 id="title">Schedule Dashboard</h1>
+        <h1 id="title"><a href="/myschedule/index.php">Schedule Dashboard</a></h1>
         <div class="mIcon">
             <span></span>
             <span></span>

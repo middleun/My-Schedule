@@ -3,6 +3,6 @@
         "db_rate": "90",
         "api_rate": "90",
         "ren_rate": "90",
-        "web_rate": "80"
+        "web_rate": "90"
     }
 ]
