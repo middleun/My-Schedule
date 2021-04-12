@@ -20,7 +20,7 @@ if(isset($_SESSION['usercode'])){
 <header>
     <div class="center headerWrap">
     <a href="/myschedule/php/sign_out.php"><i class= "fa fa-sign-out-alt"></i></a>
-        <h1 id="title"><a href="/myschedule/index.php">Schedule Dashboard</a></h1>
+        <h1 id="title"><a href="./index.php">Schedule Dashboard</a></h1>
         <div class="mIcon">
             <span></span>
             <span></span>

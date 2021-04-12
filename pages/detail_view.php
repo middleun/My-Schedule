@@ -4,7 +4,25 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Detail Schedule</title>
+    <title>My Schedule : 상세일정</title>
+
+    <!-- seo -->
+    <meta name="keywords" content="일정관리, 일정등록, 일정수정, 일정삭제, 일정확인, 진행률 수정, 진행률 확인">
+    <meta name="title" content="My Schedule:개인일정관리사이트">
+    <meta name="subject" content="일정관리 사이트">
+    <meta name="description" content="db를 활용하여 제작한 개인일정관리용 사이트로 일정관리, 일정등록, 일정수정, 일정삭제, 일정확인, 일정 진행률 수정, 진행률 확인 등의 기능이 가능합니다.">
+    <meta name="author" content="eunallaco@gmail.com, 이중은">
+    <meta name="robots" content="index,follow">
+    <meta name="copyright" content="copyrights 2021 LEEJUNGEUN.">
+
+    <!-- open graph -->
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="My Schedule:개인일정관리사이트">
+    <meta property="og:description" content="db를 활용하여 일정 진행률 수정과 확인, 일정관리가 가능한 개인 일정관리용 사이트입니다.">
+    <meta property="og:image" content="http://middleun.dothome.co.kr/myschedule/img/myschedule_og_img.png">
+    <meta property="og:url" content="https://middleun.dothome.co.kr/myschedule">
+    <meta property="og:image:width" content="1200">
+    <meta property="og:image:height" content="630">
 
     <!-- favicon link -->
     <link rel="icon" href="/myschedule/img/favicon_32x32.png"/>
@@ -28,9 +46,7 @@
     <div class="wrap">
 
         <!-- header -->
-        <?php include $_SERVER["DOCUMENT_ROOT"]. "/myschedule/include/header.php";?>
-
-             
+        <?php include $_SERVER["DOCUMENT_ROOT"]. "/myschedule/include/header.php";?>             
 
         <?php
 
@@ -92,8 +108,7 @@
                                     <span class="boCat">종류</span>
                                     <span class="boCon">내용</span>
                                     <span class="boReg">작성일</span>
-                                </li>                        
-                                                                
+                                </li>                                                      
                                     
                             
 
@@ -118,10 +133,6 @@
                             
                             </ul>
 
-                            <!-- <div class="subBtn">
-                                <button type="submit">수정 사항 입력</button>
-                            </div> -->
-
                         </form>
 
                     </div>
@@ -133,9 +144,7 @@
                         <button type="button" onclick="confirmDel()">진행상황 삭제</button>
                         <a href="/myschedule/pages/sch_view.php?key=view_all" class="schInput">진행 상황 확인</a>
                         
-                    </div>
-
-                    
+                    </div>           
 
                   
 

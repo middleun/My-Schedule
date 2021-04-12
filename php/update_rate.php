@@ -15,9 +15,7 @@
     $sql="UPDATE sch_progress SET sch_db=$sch_db, sch_api=$sch_api, sch_ren=$sch_ren, sch_web=$sch_web
     where sch_num=$sch_num";
 
-    mysqli_query($dbConn, $sql);
-
-   
+    mysqli_query($dbConn, $sql);  
 
     // cf. gold project에서 app_update.php 참고 / json파일 연결해야하므로 한 번 더 써줘야 데이터 갱신
     $sql="select * from sch_progress where sch_num=$sch_num";

@@ -1,7 +1,6 @@
 @media screen and (max-width:980px){
     .center{padding:0 25px;}
     .hiddenHeader{right:25px; }
-
 }
 
 
@@ -64,11 +63,6 @@
     /* schedule board page hidden input style */
     .hiddenTit,
     .hiddenCon{width:100%; font-size: 12px;}
-
-
-
-
-
 }
 
 
