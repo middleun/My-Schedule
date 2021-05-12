@@ -1,19 +1,9 @@
----
-layout: post
-title: "일정관리사이트"
-subtitle: "[database]"
-date: 2020-03-22
-background: 
-tag: [schedule, database, upload, delete, update]
----
-
-
 
 # MY SCHEDULE Project
 
 데이터베이스를 활용한 일정관리용 사이트입니다. 타 프로젝트의 준비 일정을 볼 수 있습니다. 
 
-# 1. 주요화면
+### 주요화면
 
 ---
 
@@ -25,7 +15,7 @@ tag: [schedule, database, upload, delete, update]
 
 ---
 
-# 2. 사이트 요약
+### 사이트 요약
 
 **#일정관리 #진행률수정 #일정등록  #일정수정 #일정삭제 #반응형**
 
@@ -37,13 +27,13 @@ tag: [schedule, database, upload, delete, update]
 
 ---
 
-# 3. 사이트 전체  구조
+### 사이트 구조
 
 ![my_schedule_flowchart.png](img/readme/my_schedule_flowchart.png)
 
 ---
 
-# 4. 사용 언어
+### 사용 언어
 
 - HTML5
 - CSS3
