@@ -64,35 +64,31 @@
         <!-- Container -->
         <div class="center gridWrap">
             
-                <div class="inputContainer">
-                    <!-- grid up -total and each project progress- -->
+            <div class="inputContainer">
+                <!-- grid up -total and each project progress- -->
+                <?php 
+                include $_SERVER["DOCUMENT_ROOT"]. "/myschedule/include/latest_date.php";                     
+                include $_SERVER["DOCUMENT_ROOT"]. "/myschedule/include/grid_up.php";
+                ?>
+
+
+                <div class="item boardBox">
                     <?php 
-
-                    include $_SERVER["DOCUMENT_ROOT"]. "/myschedule/include/latest_date.php";                     
-                    include $_SERVER["DOCUMENT_ROOT"]. "/myschedule/include/grid_up.php";
-                    ?>
-
-
-                    <div class="item boardBox">
-                        <?php 
-                            $include_path=$_GET['key'];
-                            include $_SERVER["DOCUMENT_ROOT"]. "/myschedule/include/$include_path.php";
-                        ?>
-                       
-
-                    </div>
-                          
-                    <!-- grid down - button -  -->
-                    
-                    <div class="item btns">
-                        <a href="/myschedule/pages/input_form.php" class="schInput">진행 상황 작성</a>
-                        
-                    </div>
-
-                  
+                        $include_path=$_GET['key'];
+                        include $_SERVER["DOCUMENT_ROOT"]. "/myschedule/include/$include_path.php";
+                    ?>                  
 
                 </div>
-                <!-- end of container -->
+                        
+                <!-- grid down - button -  -->
+                
+                <div class="item btns">
+                    <a href="/myschedule/pages/input_form.php" class="schInput">진행 상황 작성</a>
+                    
+                </div>               
+
+            </div>
+            <!-- end of container -->
 
 
          
@@ -126,8 +122,6 @@
             $(".boardList:hidden").slice(0,5).show();
             // 가려진 것 중에 0부터 5개를 보여줌
         });
-
-
 
     </script>
 

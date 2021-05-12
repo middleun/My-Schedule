@@ -15,12 +15,10 @@ if(isset($_SESSION['usercode'])){
 
 ?>
 
-
-
 <header>
     <div class="center headerWrap">
     <a href="/myschedule/php/sign_out.php"><i class= "fa fa-sign-out-alt"></i></a>
-        <h1 id="title"><a href="./index.php">Schedule Dashboard</a></h1>
+        <h1 id="title"><a href="../index.php">Schedule Dashboard</a></h1>
         <div class="mIcon">
             <span></span>
             <span></span>
@@ -33,7 +31,6 @@ if(isset($_SESSION['usercode'])){
                 <li><a href="/myschedule/pages/input_form.php"><i class="fa fa-edit"></i></a></li>
                 <li>
                     <a href="/myschedule/pages/sch_view.php?key=view_all"><i class="fa fa-calendar-check"></i></a>
-                   
                 </li>
             </ul>
         </div>

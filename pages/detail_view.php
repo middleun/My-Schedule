@@ -49,117 +49,111 @@
         <?php include $_SERVER["DOCUMENT_ROOT"]. "/myschedule/include/header.php";?>             
 
         <?php
+            $detail_num=$_GET['num'];
 
-        $detail_num=$_GET['num'];
+            include $_SERVER["DOCUMENT_ROOT"]. "/myschedule/include/db_conn.php";
+            $sql="select * from sch_progress";
 
-         include $_SERVER["DOCUMENT_ROOT"]. "/myschedule/include/db_conn.php";
-         $sql="select * from sch_progress";
+            $sch_result=mysqli_query($dbConn, $sql);
+            $sch_row=mysqli_fetch_array($sch_result);
 
-         $sch_result=mysqli_query($dbConn, $sql);
-         $sch_row=mysqli_fetch_array($sch_result);
-
-         $sch_db=$sch_row['sch_db'];
-         $sch_api=$sch_row['sch_api'];
-         $sch_ren=$sch_row['sch_ren'];
-         $sch_web=$sch_row['sch_web'];
+            $sch_db=$sch_row['sch_db'];
+            $sch_api=$sch_row['sch_api'];
+            $sch_ren=$sch_row['sch_ren'];
+            $sch_web=$sch_row['sch_web'];
         ?>
 
         <!-- Container -->
-        <div class="center gridWrap">
-            
-                <div class="inputContainer">
-                    <!-- grid up -total and each project progress- -->
-                    <?php 
+        <div class="center gridWrap">            
+            <div class="inputContainer">
+                <!-- grid up -total and each project progress- -->
+                <?php 
 
-                    include $_SERVER["DOCUMENT_ROOT"]. "/myschedule/include/latest_date.php";                     
-                    include $_SERVER["DOCUMENT_ROOT"]. "/myschedule/include/grid_up.php";
-                    ?>
+                include $_SERVER["DOCUMENT_ROOT"]. "/myschedule/include/latest_date.php";                     
+                include $_SERVER["DOCUMENT_ROOT"]. "/myschedule/include/grid_up.php";
+                ?>
 
 
-                    <div class="item viewBox">
+                <div class="item viewBox">
+
+                        <?php
+                            include $_SERVER["DOCUMENT_ROOT"]. "/myschedule/include/db_conn.php";
+                            $sql="select * from sch_txt where sch_txt_num=$detail_num";
+
+                            
+                            $board_result=mysqli_query($dbConn, $sql);
+
+
+                            while($board_row=mysqli_fetch_array($board_result)){
+                                $bo_num=$board_row['sch_txt_num'];
+                                $bo_cat=$board_row['sch_txt_cat'];
+                                $bo_tit=$board_row['sch_txt_tit'];
+                                $bo_reg=$board_row['sch_txt_reg'];
+                                $bo_con=$board_row['sch_txt_con'];
+
+                        ?>         
+                        
+                        
+                    <form action="/myschedule/php/detail_update.php?num=<?=$bo_num?>" method="post">
+                        <div class="detailTit">
+                            <h2><?=$bo_tit?></h2>
+                            <input type="text" value="<?=$bo_tit?>" class="hiddenTit" name="updateTit">
+                        </div>
+                        
+                        <ul class="viewTable">
+                            <li class="viewTitle">
+                                <span class="boNum">번호</span>
+                                <span class="boCat">종류</span>
+                                <span class="boCon">내용</span>
+                                <span class="boReg">작성일</span>
+                            </li>                                                      
+                                
+                        
+
+                            <li class="viewList">
+                                <span class="boNum"><?=$bo_num?></span>
+                                <span class="boCat"><?=$bo_cat?></span>
+                                <span class="boCon">
+                                    <em><?=$bo_con?></em>
+                                    <textarea class="hiddenCon" name="updateCon"><?=$bo_con?></textarea>
+                                </span>
+                                <span class="boReg"><?=$bo_reg?>
+                                    <div class="subBtn">
+                                        <button type="submit">수정 사항 입력</button>
+                                    </div>
+                                </span>
+                            </li>
 
                             <?php
-                                include $_SERVER["DOCUMENT_ROOT"]. "/myschedule/include/db_conn.php";
-                                $sql="select * from sch_txt where sch_txt_num=$detail_num";
-
-                                
-                                $board_result=mysqli_query($dbConn, $sql);
-
-
-                                while($board_row=mysqli_fetch_array($board_result)){
-                                    $bo_num=$board_row['sch_txt_num'];
-                                    $bo_cat=$board_row['sch_txt_cat'];
-                                    $bo_tit=$board_row['sch_txt_tit'];
-                                    $bo_reg=$board_row['sch_txt_reg'];
-                                    $bo_con=$board_row['sch_txt_con'];
-
-                            ?>         
+                                }
+                            ?>
                             
-                            
-                        <form action="/myschedule/php/detail_update.php?num=<?=$bo_num?>" method="post">
-                            <div class="detailTit">
-                                <h2><?=$bo_tit?></h2>
-                                <input type="text" value="<?=$bo_tit?>" class="hiddenTit" name="updateTit">
-                            </div>
-                            
-                            <ul class="viewTable">
-                                <li class="viewTitle">
-                                    <span class="boNum">번호</span>
-                                    <span class="boCat">종류</span>
-                                    <span class="boCon">내용</span>
-                                    <span class="boReg">작성일</span>
-                                </li>                                                      
-                                    
-                            
-
-                                <li class="viewList">
-                                    <span class="boNum"><?=$bo_num?></span>
-                                    <span class="boCat"><?=$bo_cat?></span>
-                                    <span class="boCon">
-                                        <em><?=$bo_con?></em>
-                                        <textarea class="hiddenCon" name="updateCon"><?=$bo_con?></textarea>
-                                    </span>
-                                    <span class="boReg"><?=$bo_reg?>
-                                        <div class="subBtn">
-                                            <button type="submit">수정 사항 입력</button>
-                                        </div>
-                                    </span>
-                                </li>
-
-                                <?php
-                                    }
-                                ?>
-                                
-                            
-                            </ul>
-
-                        </form>
-
-                    </div>
-                          
-                    <!-- grid down - button -  -->
-                    
-                    <div class="item btns">
-                        <button type="button" class="updateConBtn">진행상황 수정</button>
-                        <button type="button" onclick="confirmDel()">진행상황 삭제</button>
-                        <a href="/myschedule/pages/sch_view.php?key=view_all" class="schInput">진행 상황 확인</a>
                         
-                    </div>           
+                        </ul>
 
-                  
+                    </form>
 
                 </div>
-                <!-- end of container -->
+                        
+                <!-- grid down - button -  -->
+                
+                <div class="item btns">
+                    <button type="button" class="updateConBtn">진행상황 수정</button>
+                    <button type="button" onclick="confirmDel()">진행상황 삭제</button>
+                    <a href="/myschedule/pages/sch_view.php?key=view_all" class="schInput">진행 상황 확인</a>
+                    
+                </div>           
 
+                
 
-         
+            </div>
+            <!-- end of container -->        
 
         </div>
         <!--end of center  -->
 
         <!-- footer -->
-        <?php include $_SERVER["DOCUMENT_ROOT"]. "/myschedule/include/footer.php";?>
-        
+        <?php include $_SERVER["DOCUMENT_ROOT"]. "/myschedule/include/footer.php";?>       
      
     </div>
     <!-- end of wrap -->

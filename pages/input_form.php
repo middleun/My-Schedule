@@ -37,8 +37,7 @@
     <link rel="stylesheet" href="/myschedule/css/style.css"/>    
 
     <!-- media css link -->
-    <link rel="stylesheet" href="/myschedule/css/media.css"/>    
-    
+    <link rel="stylesheet" href="/myschedule/css/media.css"/>        
 </head>
 
 <body>
@@ -46,8 +45,7 @@
     <div class="wrap">
 
         <!-- header -->
-        <?php include $_SERVER["DOCUMENT_ROOT"]. "/myschedule/include/header.php";?>
-      
+        <?php include $_SERVER["DOCUMENT_ROOT"]. "/myschedule/include/header.php";?>      
 
         <?php
          include $_SERVER["DOCUMENT_ROOT"]. "/myschedule/include/db_conn.php";
@@ -65,44 +63,41 @@
         <!-- Container -->
         <div class="center gridWrap">
             
-                <div class="inputContainer">
-                    <!-- grid up -total and each project progress- -->
-                    <?php 
+            <div class="inputContainer">
+                <!-- grid up -total and each project progress- -->
+                <?php 
 
-                    include $_SERVER["DOCUMENT_ROOT"]. "/myschedule/include/latest_date.php";                     
-                    include $_SERVER["DOCUMENT_ROOT"]. "/myschedule/include/grid_up.php";
-                    ?>
+                include $_SERVER["DOCUMENT_ROOT"]. "/myschedule/include/latest_date.php";                     
+                include $_SERVER["DOCUMENT_ROOT"]. "/myschedule/include/grid_up.php";
+                ?>
 
 
-                    <div class="item inputBox">
-                        <form action="/myschedule/php/schedule_input.php" method="post" name="schInputForm" >
-                            <select name="projectCate"  class="projectCate">
-                                <option value="dbProject">Database Project</option>
-                                <option value="apiProject">API Project</option>
-                                <option value="renProject">Renewal Project</option>
-                                <option value="webProject">Web Planning Project</option>
-                                
-                            </select>
-                            <input type="text" name="projectTit" class="projectTit" placeholder="일정 제목을 입력해주세요">
-                            <textarea name="projectCon"  class="projectCon" placeholder="일정 상세 내용을 입력해주세요"></textarea>
-                        </form>
-
-                    </div>
-                          
-                    <!-- grid down - button -  -->
-                    
-                    <div class="item btns">
-                        <button type="button" onclick="schInput()">진행 상황 작성</button>
-                        <button type="button" onclick="javascript:location.href='/myschedule/pages/sch_view.php?key=view_all'">진행 상황 확인</button>
-                    </div>
-
-                  
+                <div class="item inputBox">
+                    <form action="/myschedule/php/schedule_input.php" method="post" name="schInputForm" >
+                        <select name="projectCate"  class="projectCate">
+                            <option value="dbProject">Database Project</option>
+                            <option value="apiProject">API Project</option>
+                            <option value="renProject">Renewal Project</option>
+                            <option value="webProject">Web Planning Project</option>
+                            
+                        </select>
+                        <input type="text" name="projectTit" class="projectTit" placeholder="일정 제목을 입력해주세요">
+                        <textarea name="projectCon"  class="projectCon" placeholder="일정 상세 내용을 입력해주세요"></textarea>
+                    </form>
 
                 </div>
-                <!-- end of container -->
+                        
+                <!-- grid down - button -  -->
+                
+                <div class="item btns">
+                    <button type="button" onclick="schInput()">진행 상황 작성</button>
+                    <button type="button" onclick="schConfirm()">진행 상황 확인</button>
+                </div>
 
+                
 
-         
+            </div>
+            <!-- end of container -->        
 
         </div>
         <!--end of center  -->
@@ -123,10 +118,10 @@
 
     <!-- main jQuery link -->
     <script src="/myschedule/js/custom.js"></script>
-
     <script src="/myschedule/js/total_avg.js"></script>
 
     <script>
+        // input form alert
         function schInput(){
             if(!document.schInputForm.projectTit.value){
                 alert('일정 제목을 입력해주세요');
@@ -137,11 +132,20 @@
                 alert('일정 상세 내용을 입력해주세요');
                 document.schInputForm.projectCon.focus();
                 return false;
-            }    
-            
-            document.schInputForm.submit();
-            
+            }                
+            document.schInputForm.submit();            
         }
+
+        // schedule input form confirm 
+        function schConfirm(){
+            let conCheck=confirm("작성중인 내용이 있습니다. 페이지를 나가시겠습니까?")
+            if(conCheck==false){
+                return false;
+            }else{
+                location.href='/myschedule/pages/sch_view.php?key=view_all'
+            };
+        };
+
     </script>
 
     

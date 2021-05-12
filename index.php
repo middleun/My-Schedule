@@ -54,7 +54,6 @@
         <?php
          include $_SERVER["DOCUMENT_ROOT"]. "/myschedule/include/db_conn.php";
          $sql="select * from sch_progress"; 
-
          $sch_result=mysqli_query($dbConn, $sql);
          $sch_row=mysqli_fetch_array($sch_result);
 
@@ -73,11 +72,7 @@
 
                     <?php
                       include $_SERVER["DOCUMENT_ROOT"]. "/myschedule/include/latest_date.php";                                               
-                      include $_SERVER["DOCUMENT_ROOT"]. "/myschedule/include/grid_up.php";              
-
-                    
-                   
-
+                      include $_SERVER["DOCUMENT_ROOT"]. "/myschedule/include/grid_up.php";        
                     ?>
                           
                     <!-- grid down - button -  -->
