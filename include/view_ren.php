@@ -1,7 +1,7 @@
 <div class="categoryTabs">
     <a href="/myschedule/pages/sch_view.php?key=view_all" >All</a>
     <a href="/myschedule/pages/sch_view.php?key=view_db"><i class="fa fa-database"></i></a>
-    <a href="/myschedule/pages/sch_view.php?key=view_api"><i class="fa fa-cloud-sun"></i></a>
+    <a href="/myschedule/pages/sch_view.php?key=view_api"><i class="fa fa-film"></i></a>
     <a href="/myschedule/pages/sch_view.php?key=view_ren" class="active"><i class="fa fa-clone"></i></a>
     <a href="/myschedule/pages/sch_view.php?key=view_web"><i class="fa fa-chart-bar"></i></a>
 </div>

@@ -138,8 +138,8 @@
 
         // schedule input form confirm 
         function schConfirm(){
-            let conCheck=confirm("작성중인 내용이 있습니다. 페이지를 나가시겠습니까?")
-            if(conCheck==false){
+            let confirmCheck=confirm("작성중인 내용이 있습니다. 페이지를 나가시겠습니까?")
+            if(confirmCheck==false){
                 return false;
             }else{
                 location.href='/myschedule/pages/sch_view.php?key=view_all'

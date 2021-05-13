@@ -8,13 +8,16 @@ $(function(){
     // header icon control
     $(".mIcon").click(function(){
         $(this).toggleClass("on");
-    
-        if($(this).hasClass("on")){
-            $(".depth-1").slideDown('fast');
-        }else{
-            $(".depth-1").slideUp('fast');
+        $(".depth-1").slideToggle();    
+    });
+
+    // when click anywhere except mIcon
+    $(document).click(function(e){
+        if(!$(e.target).hasClass("mIcon")){
+            $(".mIcon").removeClass("on");
+            $(".depth-1").hide();
         }
-    });  
+    })
 
     // schedule board page hidden input show and hide
     $(".updateConBtn").click(function(){

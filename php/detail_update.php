@@ -3,12 +3,11 @@
 
 <?php
     $update_num=$_GET['num'];
-    $update_tit=nl2br($_POST['updateTit']);
+    $update_tit=$_POST['updateTit'];
     $update_tit=addslashes($update_tit);
-
-    $update_con=nl2br($_POST['updateCon']);
+    $update_con=$_POST['updateCon'];
     $update_con=addslashes($update_con);
- 
+
 
     include $_SERVER['DOCUMENT_ROOT'].'/myschedule/include/db_conn.php';
 
@@ -23,6 +22,4 @@
       location.href='/myschedule/pages/detail_view.php?num=$update_num';
     </script>
     ";
-
-
 ?>

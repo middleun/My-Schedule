@@ -1,7 +1,7 @@
 <div class="categoryTabs">
     <a href="/myschedule/pages/sch_view.php?key=view_all" class="active">All</a>
     <a href="/myschedule/pages/sch_view.php?key=view_db"><i class="fa fa-database"></i></a>
-    <a href="/myschedule/pages/sch_view.php?key=view_api"><i class="fa fa-cloud-sun"></i></a>
+    <a href="/myschedule/pages/sch_view.php?key=view_api"><i class="fa fa-film"></i></a>
     <a href="/myschedule/pages/sch_view.php?key=view_ren"><i class="fa fa-clone"></i></a>
     <a href="/myschedule/pages/sch_view.php?key=view_web"><i class="fa fa-chart-bar"></i></a>
 </div>
@@ -24,7 +24,6 @@
             $bo_cat=$board_row['sch_txt_cat'];
             $bo_tit=$board_row['sch_txt_tit'];
             $bo_reg=$board_row['sch_txt_reg'];
-
     ?>                      
                                         
     <li class="boardList">
@@ -36,8 +35,7 @@
 
     <?php
         }
-    ?>    
-    
+    ?>        
 </ul>
 <div class="loadMore">
     <button type="button">더보기</button>
