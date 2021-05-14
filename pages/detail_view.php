@@ -113,7 +113,7 @@
                                 </span>
                                 <span class="boReg"><?=$bo_reg?>
                                     <div class="subBtn">
-                                        <button type="submit">수정 사항 입력</button>
+                                        <button type="submit">수정</button>
                                     </div>
                                 </span>
                             </li>
@@ -128,9 +128,9 @@
                 <!-- grid down - button -  -->
                 
                 <div class="item btns">
-                    <button type="button" class="updateConBtn">진행상황 수정</button>
-                    <button type="button" onclick="confirmDel()">진행상황 삭제</button>
-                    <button type="button" onclick="schConfirm()" class="schInput">진행 상황 확인</a>
+                    <button type="button" class="updateConBtn">일정 수정</button>
+                    <button type="button" onclick="confirmDel()">일정 삭제</button>
+                    <button type="button" onclick="goSchView()" class="schInput confirmBtn">일정 목록</a>
                 </div>          
             </div>
             <!-- end of container -->       
@@ -157,8 +157,7 @@
 
     <script>
         // confirm when click delete btn
-        function confirmDel(){
-        
+        function confirmDel(){            
             let isCheck=confirm('정말로 삭제하시겠습니까?')
             if(isCheck==false){
                 return false;
@@ -167,7 +166,12 @@
             };
         };
 
-        // confirm when click check btn 
+        //when click confirm button(default)
+        function goSchView(){
+            location.href="/myschedule/pages/sch_view.php?key=view_all"
+        }
+
+        // confirm when click confirm button(if updateConBtn has class "on") 
         function schConfirm(){
             let confirmCheck=confirm("수정중인 내용이 있습니다. 페이지를 나가시겠습니까?");
             if(confirmCheck==false){
@@ -175,15 +179,7 @@
             }else{
                 location.href="/myschedule/pages/sch_view.php?key=view_all" 
             };
-        };
-        $("#clickTest").attr('onclick', '').unbind('click');
-
-        // $(function(){
-        //     if(!$(".updateConBtn").hasClass("on")){
-        //         $(".schInput").attr("onclick","")
-        //     }
-        // });
-    
+        };              
     </script> 
    
     

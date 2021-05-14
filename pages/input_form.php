@@ -90,8 +90,8 @@
                 <!-- grid down - button -  -->
                 
                 <div class="item btns">
-                    <button type="button" onclick="schInput()">진행 상황 작성</button>
-                    <button type="button" onclick="schConfirm()">진행 상황 확인</button>
+                    <button type="button" onclick="schInput()">일정 추가</button>
+                    <button type="button" onclick="schConfirm()">일정 목록</button>
                 </div>
 
                 

@@ -3,7 +3,7 @@ $(function(){
     for(let i=0; i<$(".subPfBar").length; i++){
         let rateNum=$(".subPfBar").eq(i).find(".rateNum").val();
         $(".subPfBar").eq(i).find(".pfBar").animate({width:rateNum + "%"}, 1200);
-    }
+    };
 
     // header icon control
     $(".mIcon").click(function(){
@@ -17,7 +17,7 @@ $(function(){
             $(".mIcon").removeClass("on");
             $(".depth-1").hide();
         }
-    })
+    }); 
 
     // schedule board page hidden input show and hide
     $(".updateConBtn").click(function(){
@@ -28,15 +28,19 @@ $(function(){
             $(this).css({"color":"#5F75DF", "background":"#fff"})
             $(".detailTit h2, .boCon em").hide();
             $(".hiddenTit, .hiddenCon, .subBtn").show();
+            // confirm button change when update button has class "on"  
+            $(".confirmBtn").removeAttr("onclick");
+            $(".confirmBtn").attr("onclick","schConfirm()");
 
         }else{
             $(this).text("진행상황 수정");
             $(this).css({"color":"#fff", "background":"#5f75df"})
             $(".detailTit h2, .boCon em").show();
-            $(".hiddenTit, .hiddenCon, .subBtn").hide();
-                   
+            $(".hiddenTit, .hiddenCon, .subBtn").hide();  
+            // confirm button change when update button hasn't class "on"  
+            $(".confirmBtn").attr("onclick","goSchView()");
 
-        }
-    }); 
-    
+
+        };
+    });
 });

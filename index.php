@@ -39,8 +39,7 @@
     <link rel="stylesheet" href="/myschedule/css/style.css"/>    
 
     <!-- media css link -->
-    <link rel="stylesheet" href="/myschedule/css/media.css"/>    
-    
+    <link rel="stylesheet" href="/myschedule/css/media.css"/>     
 </head>
 
 <body>
@@ -50,7 +49,6 @@
         <!-- header -->
         <?php include $_SERVER["DOCUMENT_ROOT"]. "/myschedule/include/header.php";?>
       
-
         <?php
          include $_SERVER["DOCUMENT_ROOT"]. "/myschedule/include/db_conn.php";
          $sql="select * from sch_progress"; 
@@ -79,14 +77,11 @@
                     
                     <div class="item btns">
                         <button type="button" onclick="updateSubmit()">진행률 수정</button>
-                        <button type="button" onclick="javascript:location.href='/myschedule/pages/input_form.php'">진행상황 작성</button>
-                        <button type="button" onclick="javascript:location.href='/myschedule/pages/sch_view.php?key=view_all'">진행상황 확인</button>
+                        <button type="button" onclick="javascript:location.href='/myschedule/pages/input_form.php'">일정 작성</button>
+                        <button type="button" onclick="javascript:location.href='/myschedule/pages/sch_view.php?key=view_all'">일정 목록</button>
                     </div>
-
-
                 </div>
                 <!-- end of container -->
-
 
             </form>    
             <!--end of form table  -->

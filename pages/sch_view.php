@@ -81,7 +81,7 @@
                 <!-- grid down - button -  -->
                 
                 <div class="item btns">
-                    <a href="/myschedule/pages/input_form.php" class="schInput">진행 상황 작성</a>                    
+                    <a href="/myschedule/pages/input_form.php" class="schInput">일정 작성</a>                    
                 </div>               
 
             </div>
